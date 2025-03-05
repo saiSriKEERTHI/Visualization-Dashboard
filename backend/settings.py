@@ -25,7 +25,12 @@ SECRET_KEY = 'django-insecure-z(4+-)scm@@2mb07-@s+0&x!d$5@*7%43e$%$91g*+!g8g51v^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "visualization-dashboard-qyik.onrender.com",  # Your Render domain
+    "localhost",
+    "127.0.0.1"
+]
+
 
 
 # Application definition
@@ -146,5 +151,8 @@ CHANNEL_LAYERS = {
 
 
 # CORS Configuration (Allows API to be accessed from React)
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    "https://your-api-name.onrender.com",  # Replace with your actual Render domain
+    "http://localhost:3000",  # Allows frontend to access backend during development
+]
 
