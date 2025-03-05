@@ -1,9 +1,8 @@
-from django.contrib import admin
-from django.urls import path, include
-from dashboard.views import home  # ✅ Import `home` from `dashboard.views`
+from django.urls import path
+from .views import home, get_data  # ✅ Import both views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/', include('dashboard.urls')),  # Include dashboard app's URLs
-    path('', home, name='home'),  # Redirect root URL to home API response
+    path('', home, name='home'),  # ✅ Home endpoint
+    path('data/', get_data, name='get_data'),  # ✅ Data endpoint
 ]
+
