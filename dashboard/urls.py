@@ -1,10 +1,9 @@
 from django.contrib import admin
 from django.urls import path, include
-from .views import home  # Import the home view
+from dashboard.views import home  # ✅ Import `home` from `dashboard.views`
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('dashboard.urls')),
-    path('', home, name='home'),  # Map root URL to home view
+    path('api/', include('dashboard.urls')),  # Include dashboard app's URLs
+    path('', home, name='home'),  # Redirect root URL to home API response
 ]
-

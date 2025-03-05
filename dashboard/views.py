@@ -2,10 +2,10 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from .models import DataEntry
 from .serializers import DataEntrySerializer
-from django.shortcuts import redirect
+from django.http import JsonResponse
 
-def redirect_to_dashboard(request):
-    return redirect('/api/')  # Redirect root URL to the API
+def home(request):
+    return JsonResponse({"message": "Welcome to the API!"})
 
 @api_view(['GET'])
 def get_data(request):
