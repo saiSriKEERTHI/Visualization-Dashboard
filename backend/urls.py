@@ -13,11 +13,13 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin  # ✅ Add this line
+from django.contrib import admin
 from django.urls import path, include
+from dashboard.views import redirect_to_dashboard  # Import the redirect view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('dashboard.urls')),
+    path('', redirect_to_dashboard, name='redirect_to_dashboard'),  # Redirect root URL
 ]
 
