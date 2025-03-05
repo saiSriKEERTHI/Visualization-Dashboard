@@ -25,7 +25,6 @@ six==1.17.0
 sqlparse==0.4.4
 tomli==2.2.1
 Twisted==24.11.0
-twisted-iocpsupport==1.0.4
 txaio==23.1.1
 typing_extensions==4.12.2
 websocket-client==1.6.1
