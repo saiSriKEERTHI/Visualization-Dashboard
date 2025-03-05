@@ -1,7 +1,8 @@
 from django.urls import path
-from .views import home, get_data  # ✅ Fix import
+from .views import home, get_data  # ✅ Make sure 'home' is imported
 
 urlpatterns = [
-    path('', home, name='home'),  # ✅ Fix home route
-    path('data/', get_data, name='get_data'),  # ✅ API data route
+    path('', home, name='home'),  # ✅ Root API response
+    path('data/', get_data, name='get_data'),  # ✅ Endpoint for fetching data
 ]
+

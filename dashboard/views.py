@@ -4,7 +4,7 @@ from rest_framework.decorators import api_view
 from .models import DataEntry
 from .serializers import DataEntrySerializer
 
-# ✅ Add home function to fix ImportError
+# ✅ Ensure home() exists
 def home(request):
     return JsonResponse({"message": "Welcome to the API!"})
 
