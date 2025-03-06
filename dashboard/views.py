@@ -1,10 +1,10 @@
-from django.http import JsonResponse
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
+from django.http import JsonResponse
 from .models import DataEntry
 from .serializers import DataEntrySerializer
 
-# ✅ Ensure home() exists
+# ✅ Fix: Add the `home` function here!
 def home(request):
     return JsonResponse({"message": "Welcome to the API!"})
 

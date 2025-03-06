@@ -15,11 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from dashboard.views import home  # ✅ Fix ImportError
+from dashboard.views import home  # ✅ Make sure `home` is imported correctly
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('dashboard.urls')),  # ✅ Include API routes
-    path('', home, name='home'),  # ✅ Root should return API welcome message
+    path('api/', include('dashboard.urls')),
+    path('', home, name='home'),  # ✅ Redirect root URL to `home`
 ]
 
