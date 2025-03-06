@@ -152,7 +152,7 @@ CHANNEL_LAYERS = {
 
 # CORS Configuration (Allows API to be accessed from React)
 CORS_ALLOWED_ORIGINS = [
-    "https://your-api-name.onrender.com",  # Replace with your actual Render domain
+    "https://visualization-dashboard-qyik.onrender.com",  # Replace with your actual Render domain
     "http://localhost:3000",  # Allows frontend to access backend during development
 ]
 
